@@ -6,6 +6,7 @@
     <title>Subaru History | Heritage & Motorsport</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
+        /* 保留原网格样式 */
         .history-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -48,6 +49,39 @@
             display: inline-block;
             margin-top: 0.5rem;
         }
+
+        /* 调整两栏布局：主内容在左，侧边栏在右 */
+        .main-grid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        /* 主内容区（原为flex:1，现在放在左侧） */
+        main {
+            flex: 1;
+            padding: 2rem;
+            background: white;
+            min-width: 0;
+        }
+        /* 侧边栏移动到右侧：宽度固定，边框改为左侧边框 */
+        #sidebar {
+            width: 260px;
+            background: #ececec;
+            padding: 1.5rem;
+            border-left: 1px solid #ccc;  /* 原为 border-right，现改为 border-left */
+            order: 2; /* 确保在右侧显示 */
+        }
+        /* 响应式：小屏幕时恢复堆叠，侧边栏在上方或下方？保持原逻辑 */
+        @media (max-width: 768px) {
+            .main-grid {
+                flex-direction: column;
+            }
+            #sidebar {
+                width: 100%;
+                border-left: none;
+                border-top: 1px solid #ccc;  /* 堆叠时侧边栏在下方加顶边框 */
+                order: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -66,24 +100,10 @@
         <a href="../life/index.html">Life with Subaru</a>
         <a href="index.html">History</a>
         <a href="../about/index.html">About</a>
-
     </nav>
 
     <div class="main-grid">
-        <aside id="sidebar">
-            <div class="sidebar-box">
-                <h3>History Local Nav</h3>
-                <ul>
-                    <li><a href="brand.html">Brand History</a></li>
-                    <li><a href="racing.html">Racing Heritage</a></li>
-                </ul>
-            </div>
-            <div class="sidebar-box">
-                <h3>Key Milestones</h3>
-                <p>🏭 1953: Subaru founded<br>🏎️ 1972: First Leone 4WD<br>🏆 1995-1997: WRC champions<br>🇺🇸 2008: Indiana plant opens</p>
-            </div>
-        </aside>
-
+        <!-- 主内容区域（放在左侧） -->
         <main>
             <h2>Subaru History</h2>
             <img src="../images/history-overview.jpg" alt="Vintage Subaru 360 and modern WRX side by side" style="max-width:100%; border-radius:12px; margin:1rem 0;">
@@ -108,12 +128,26 @@
             </div>
             <div class="back-to-top"><a href="#">↑ Back to top</a></div>
         </main>
+
+        <!-- 侧边栏（两个大方格）移动到右侧 -->
+        <aside id="sidebar">
+            <div class="sidebar-box">
+                <h3>History Local Nav</h3>
+                <ul>
+                    <li><a href="brand.html">Brand History</a></li>
+                    <li><a href="racing.html">Racing Heritage</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-box">
+                <h3>Key Milestones</h3>
+                <p>🏭 1953: Subaru founded<br>🏎️ 1972: First Leone 4WD<br>🏆 1995-1997: WRC champions<br>🇺🇸 2008: Indiana plant opens</p>
+            </div>
+        </aside>
     </div>
 
     <footer>
         <div class="footer-nav">
             <a href="../index.html">Home</a>
-
             <a href="../about/contact.html">Contact</a>
             <a href="../sources.html">Sources</a>
         </div>
