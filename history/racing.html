@@ -26,6 +26,39 @@
             border-radius: 8px;
             margin: 1.5rem 0;
         }
+
+        /* 调整两栏布局：主内容在左，侧边栏在右 */
+        .main-grid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        /* 主内容区 */
+        main {
+            flex: 1;
+            padding: 2rem;
+            background: white;
+            min-width: 0;
+        }
+        /* 侧边栏移动到右侧 */
+        #sidebar {
+            width: 260px;
+            background: #ececec;
+            padding: 1.5rem;
+            border-left: 1px solid #ccc;
+            order: 2;
+        }
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .main-grid {
+                flex-direction: column;
+            }
+            #sidebar {
+                width: 100%;
+                border-left: none;
+                border-top: 1px solid #ccc;
+                order: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -43,21 +76,9 @@
         <a href="../life/index.html">Life with Subaru</a>
         <a href="index.html">History</a>
         <a href="../about/index.html">About</a>
-
     </nav>
     <div class="main-grid">
-        <aside id="sidebar">
-            <div class="sidebar-box">
-                <h3>Also in History</h3>
-                <ul>
-                    <li><a href="brand.html">Brand History</a></li>
-                </ul>
-            </div>
-            <div class="sidebar-box">
-                <h3>Racing Highlights</h3>
-                <p>🏆 3 WRC manufacturers' titles (1995-1997)<br>👨‍✈️ Colin McRae · Richard Burns · Petter Solberg<br>🏁 Legacy RS · Impreza 555 · WRX STI</p>
-            </div>
-        </aside>
+        <!-- 主内容（左侧） -->
         <main>
             <a href="index.html" style="display:inline-block; margin:1rem 0; color:#E67E22;">← Back to History</a>
             <h2>Subaru Racing Heritage</h2>
@@ -82,12 +103,25 @@
             <p>Even after Subaru left the WRC factory program in 2008, privateers continue to race Imprezas worldwide. The legacy of the blue-and-yellow rally cars remains one of the most beloved in automotive history.</p>
             <div class="back-to-top"><a href="#">↑ Back to top</a></div>
         </main>
+
+        <!-- 侧边栏（两个大方格）移动到右侧 -->
+        <aside id="sidebar">
+            <div class="sidebar-box">
+                <h3>Also in History</h3>
+                <ul>
+                    <li><a href="brand.html">Brand History</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-box">
+                <h3>Racing Highlights</h3>
+                <p>🏆 3 WRC manufacturers' titles (1995-1997)<br>👨‍✈️ Colin McRae · Richard Burns · Petter Solberg<br>🏁 Legacy RS · Impreza 555 · WRX STI</p>
+            </div>
+        </aside>
     </div>
     
     <footer>
         <div class="footer-nav">
             <a href="../index.html">Home</a>
-
             <a href="../about/contact.html">Contact</a>
             <a href="../sources.html">Sources</a>
         </div>
