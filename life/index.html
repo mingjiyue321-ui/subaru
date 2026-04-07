@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life with Subaru | Community & Adventures</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .life-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.8rem;
+            margin: 1.5rem 0;
+        }
+        .life-card {
+            background: #fafafa;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .life-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        .life-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .life-info {
+            padding: 1rem;
+            text-align: center;
+        }
+        .life-info h3 {
+            color: #1A3C6E;
+            margin-bottom: 0.25rem;
+        }
+        .btn-detail {
+            background: #E67E22;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <header>
+        <div class="header-content">
+            <img src="../images/subaru-logo.svg" alt="Subaru Logo with stars" class="site-logo">
+            <h1>Subaru · rugged & adventurous</h1>
+        </div>
+    </header>
+
+    <nav class="global-nav">
+        <a href="../index.html">Home</a>
+        <a href="../models/index.html">Models</a>
+        <a href="../technology/index.html">Technology</a>
+        <a href="index.html">Life with Subaru</a>
+        <a href="../history/index.html">History</a>
+        <a href="../about/index.html">About</a>
+
+    </nav>
+
+    <div class="main-grid">
+        <aside id="sidebar">
+            <div class="sidebar-box">
+                <h3>Life Local Nav</h3>
+                <ul>
+                    <li><a href="stories.html">Owner Stories</a></li>
+                    <li><a href="guide.html">Adventure Guide</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-box">
+                <h3>Subaru Community</h3>
+                <p>🏕️ National Park partners<br>🐾 Subaru Loves Pets<br>🌲 Leave No Trace ethics<br>📸 #SubaruAdventure</p>
+            </div>
+        </aside>
+
+        <main>
+            <h2>Life with Subaru</h2>
+            <img src="../images/family-camping.jpg" alt="Family relaxing with dog beside Subaru at campsite" style="max-width:100%; border-radius:12px; margin:1rem 0;">
+            <p>Owning a Subaru is more than driving a car – it's joining a community of outdoor enthusiasts, pet lovers, and safety-minded families. Subaru owners are known for their loyalty (highest in the industry), and they love to share stories of road trips, camping, and snowy commutes. In this section, we share real owner experiences and a guide to planning your own Subaru adventure.</p>
+            <div class="life-grid">
+                <a href="stories.html" class="life-card">
+                    <img src="../images/stories.jpg" alt="Subaru owner smiling with their car">
+                    <div class="life-info">
+                        <h3>Owner Stories</h3>
+                        <p>Real people, real journeys</p>
+                        <span class="btn-detail">Read →</span>
+                    </div>
+                </a>
+                <a href="guide.html" class="life-card">
+                    <img src="../images/guide.jpg" alt="Map and compass on Subaru dashboard">
+                    <div class="life-info">
+                        <h3>Adventure Guide</h3>
+                        <p>Plan your next trip</p>
+                        <span class="btn-detail">Explore →</span>
+                    </div>
+                </a>
+            </div>
+            <div class="back-to-top"><a href="#">↑ Back to top</a></div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="../index.html">Home</a>
+
+            <a href="../about/contact.html">Contact</a>
+            <a href="../sources.html">Sources</a>
+        </div>
+        <p>© 2026 Subaru Brand Guide – educational project. </p>
+    </footer>
+</div>
+</body>
+</html>

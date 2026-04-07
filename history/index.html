@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subaru History | Heritage & Motorsport</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .history-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.8rem;
+            margin: 1.5rem 0;
+        }
+        .history-card {
+            background: #fafafa;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .history-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        .history-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .history-info {
+            padding: 1rem;
+            text-align: center;
+        }
+        .history-info h3 {
+            color: #1A3C6E;
+            margin-bottom: 0.25rem;
+        }
+        .btn-detail {
+            background: #E67E22;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <header>
+        <div class="header-content">
+            <img src="../images/subaru-logo.svg" alt="Subaru Logo with stars" class="site-logo">
+            <h1>Subaru · rugged & adventurous</h1>
+        </div>
+    </header>
+
+    <nav class="global-nav">
+        <a href="../index.html">Home</a>
+        <a href="../models/index.html">Models</a>
+        <a href="../technology/index.html">Technology</a>
+        <a href="../life/index.html">Life with Subaru</a>
+        <a href="index.html">History</a>
+        <a href="../about/index.html">About</a>
+
+    </nav>
+
+    <div class="main-grid">
+        <aside id="sidebar">
+            <div class="sidebar-box">
+                <h3>History Local Nav</h3>
+                <ul>
+                    <li><a href="brand.html">Brand History</a></li>
+                    <li><a href="racing.html">Racing Heritage</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-box">
+                <h3>Key Milestones</h3>
+                <p>🏭 1953: Subaru founded<br>🏎️ 1972: First Leone 4WD<br>🏆 1995-1997: WRC champions<br>🇺🇸 2008: Indiana plant opens</p>
+            </div>
+        </aside>
+
+        <main>
+            <h2>Subaru History</h2>
+            <img src="../images/history-overview.jpg" alt="Vintage Subaru 360 and modern WRX side by side" style="max-width:100%; border-radius:12px; margin:1rem 0;">
+            <p>From a tiny 360cc microcar to World Rally Championship dominance, Subaru's history is one of innovation, resilience, and a stubborn commitment to all‑wheel drive. Founded in 1953 as Fuji Heavy Industries' automotive division, the brand took its name from the Pleiades star cluster (Subaru in Japanese). Today, Subaru is known for safety, longevity, and a fiercely loyal following.</p>
+            <div class="history-grid">
+                <a href="brand.html" class="history-card">
+                    <img src="../images/brand-history.jpg" alt="Subaru assembly line in the 1970s">
+                    <div class="history-info">
+                        <h3>Brand History</h3>
+                        <p>From 360 to Outback · The Subaru story</p>
+                        <span class="btn-detail">Read →</span>
+                    </div>
+                </a>
+                <a href="racing.html" class="history-card">
+                    <img src="../images/rally-history.jpg" alt="Subaru Impreza WRC flying through forest stage">
+                    <div class="history-info">
+                        <h3>Racing Heritage</h3>
+                        <p>World Rally Championship · Colin McRae · 555</p>
+                        <span class="btn-detail">Read →</span>
+                    </div>
+                </a>
+            </div>
+            <div class="back-to-top"><a href="#">↑ Back to top</a></div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="../index.html">Home</a>
+
+            <a href="../about/contact.html">Contact</a>
+            <a href="../sources.html">Sources</a>
+        </div>
+        <p>© 2026 Subaru Brand Guide – educational project. </p>
+    </footer>
+</div>
+</body>
+</html>

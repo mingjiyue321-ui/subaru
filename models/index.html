@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subaru Models | All Vehicles</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* 车型卡片网格布局 */
+        .model-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.8rem;
+            margin: 1.5rem 0;
+        }
+        .model-card {
+            background: #fafafa;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .model-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        .model-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+        .model-info {
+            padding: 1rem;
+            text-align: center;
+        }
+        .model-info h3 {
+            color: #1A3C6E;
+            margin: 0 0 0.25rem 0;
+            font-size: 1.3rem;
+        }
+        .model-info p {
+            font-size: 0.85rem;
+            color: #3E3E3E;
+            margin-bottom: 0.5rem;
+        }
+        .btn-detail {
+            display: inline-block;
+            background: #E67E22;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 0.5rem;
+        }
+        .btn-detail:hover {
+            background: #1A3C6E;
+        }
+        .local-nav {
+            margin-bottom: 1rem;
+        }
+        .local-nav a {
+            display: inline-block;
+            background: #ececec;
+            padding: 0.3rem 0.8rem;
+            margin: 0.2rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            text-decoration: none;
+            color: #1A3C6E;
+        }
+        .local-nav a:hover {
+            background: #E67E22;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            .model-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <header>
+        <div class="header-content">
+            <img src="../images/subaru-logo.svg" alt="Subaru Logo with stars" class="site-logo">
+            <h1>Subaru · rugged & adventurous</h1>
+        </div>
+    </header>
+
+   <nav class="global-nav">
+        <a href="../index.html">Home</a>
+        <a href="index.html">Models</a>         
+        <a href="../technology/index.html">Technology</a>
+        <a href="../life/index.html">Life with Subaru</a>
+        <a href="../history/index.html">History</a>
+        <a href="../about/index.html">About</a>
+    </nav>
+
+    <div class="main-grid">
+        <aside id="sidebar">
+            <div class="sidebar-box">
+                <h3>📌 Local Navigation</h3>
+                <ul>
+                    <li><a href="forester.html">Forester</a></li>
+                    <li><a href="outback.html">Outback</a></li>
+                    <li><a href="crosstrek.html">Crosstrek</a></li>
+                    <li><a href="brz.html">BRZ</a></li>
+                    <li><a href="impreza.html">Impreza</a></li>
+                    <li><a href="wrx.html">WRX</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-box">
+                <h3>Compare by Category</h3>
+                <p>🚙 SUVs: Forester, Outback, Crosstrek<br>
+                🏎️ Sports: BRZ, WRX<br>
+                🚗 Hatch/Sedan: Impreza</p>
+                <p><a href="../technology/awd.html">All-Wheel Drive →</a></p>
+            </div>
+        </aside>
+
+        <main>
+            <h2>All Subaru Models</h2>
+            <p>From rugged SUVs to thrilling sports cars, every Subaru comes standard with Symmetrical All-Wheel Drive and a passionate community. Click any model to explore detailed specs, safety ratings, and off-road capability.</p>
+            
+            <!-- 本地导航快捷标签（辅助） -->
+            <div class="local-nav">
+                🚗 Jump to: 
+                <a href="#forester">Forester</a>
+                <a href="#outback">Outback</a>
+                <a href="#crosstrek">Crosstrek</a>
+                <a href="#brz">BRZ</a>
+                <a href="#impreza">Impreza</a>
+                <a href="#wrx">WRX</a>
+            </div>
+
+            <div class="model-grid">
+                <!-- Forester -->
+                <a href="forester.html" class="model-card" id="forester">
+                    <img src="../images/forester.jpg" alt="Subaru Forester driving on a forest trail">
+                    <div class="model-info">
+                        <h3>Forester</h3>
+                        <p>Compact SUV · Best-in-class visibility · Standard AWD</p>
+                        <span class="btn-detail">Learn more →</span>
+                    </div>
+                </a>
+
+                <!-- Outback -->
+                <a href="outback.html" class="model-card" id="outback">
+                    <img src="../images/outback.jpg" alt="Subaru Outback wagon on a mountain road">
+                    <div class="model-info">
+                        <h3>Outback</h3>
+                        <p>Midsize wagon · 8.7” ground clearance · Wilderness edition</p>
+                        <span class="btn-detail">Learn more →</span>
+                    </div>
+                </a>
+
+                <!-- Crosstrek -->
+                <a href="crosstrek.html" class="model-card" id="crosstrek">
+                    <img src="../images/crosstrek.jpg" alt="Subaru Crosstrek crossing a stream">
+                    <div class="model-info">
+                        <h3>Crosstrek</h3>
+                        <p>Subcompact crossover · Rugged & agile · X-MODE</p>
+                        <span class="btn-detail">Learn more →</span>
+                    </div>
+                </a>
+
+                <!-- BRZ -->
+                <a href="brz.html" class="model-card" id="brz">
+                    <img src="../images/brz.jpg" alt="Subaru BRZ sports coupe on a race track">
+                    <div class="model-info">
+                        <h3>BRZ</h3>
+                        <p>Rear-wheel drive sports coupe · Boxer engine · Lightweight</p>
+                        <span class="btn-detail">Learn more →</span>
+                    </div>
+                </a>
+
+                <!-- Impreza -->
+                <a href="impreza.html" class="model-card" id="impreza">
+                    <img src="../images/impreza.jpg" alt="Subaru Impreza hatchback on a city street">
+                    <div class="model-info">
+                        <h3>Impreza</h3>
+                        <p>Hatchback / Sedan · Affordable AWD · Great safety</p>
+                        <span class="btn-detail">Learn more →</span>
+                    </div>
+                </a>
+
+                <!-- WRX -->
+                <a href="wrx.html" class="model-card" id="wrx">
+                    <img src="../images/wrx.jpg" alt="Subaru WRX performance sedan with rally spirit">
+                    <div class="model-info">
+                        <h3>WRX</h3>
+                        <p>Performance sedan · Turbocharged · Iconic rally heritage</p>
+                        <span class="btn-detail">Learn more →</span>
+                    </div>
+                </a>
+            </div>
+
+            <p><em>Want a quick comparison? Visit our <a href="/technology/index.html">Technology</a> page to see how EyeSight and AWD work across models.</em></p>
+            <div class="back-to-top"><a href="#">↑ Back to top</a></div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="../index.html">Home</a>
+
+            <a href="../about/contact.html">Contact</a>
+            <a href="../sources.html">Sources</a>
+        </div>
+        <p>© 2026 Subaru Brand Guide – educational project. <br> 
+       
+        </p>
+    </footer>
+</div>
+</body>
+</html>

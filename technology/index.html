@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subaru Technology | Engineering Excellence</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* 三列液态布局覆盖（不改变原颜色/内容） */
+        .main-grid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* 左侧边栏（原样式保留） */
+        #sidebar {
+            width: 260px;
+            background: #ececec;
+            padding: 1.5rem;
+            border-right: 1px solid #ccc;
+        }
+
+        /* 中间主内容区：自适应宽度 */
+        main {
+            flex: 1;
+            padding: 2rem;
+            background: white;
+            min-width: 0; /* 防止溢出 */
+        }
+
+        /* 右侧边栏（新增） */
+        .right-sidebar {
+            width: 260px;
+            background: #ececec;
+            padding: 1.5rem;
+            border-left: 1px solid #ccc;
+        }
+
+        /* 右侧边栏内的盒子样式，与左侧 sidebar-box 保持一致 */
+        .right-sidebar .sidebar-box {
+            background: white;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .right-sidebar .sidebar-box h3 {
+            color: #1A3C6E;
+            border-left: 4px solid #E67E22;
+            padding-left: 0.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .right-sidebar .sidebar-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .right-sidebar .sidebar-box li {
+            margin-bottom: 0.5rem;
+        }
+
+        .right-sidebar .sidebar-box a {
+            color: #1A3C6E;
+            text-decoration: none;
+        }
+
+        .right-sidebar .sidebar-box a:hover {
+            text-decoration: underline;
+            color: #E67E22;
+        }
+
+        /* 响应式：小屏幕时三列堆叠 */
+        @media (max-width: 992px) {
+            .main-grid {
+                flex-direction: column;
+            }
+            #sidebar, .right-sidebar {
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid #ccc;
+            }
+            .right-sidebar {
+                border-top: 1px solid #ccc;
+            }
+        }
+
+        /* 以下为原有 tech-grid 等样式，完全保留 */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.8rem;
+            margin: 1.5rem 0;
+        }
+        .tech-card {
+            background: #fafafa;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        .tech-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+        .tech-info {
+            padding: 1rem;
+            text-align: center;
+        }
+        .tech-info h3 {
+            color: #1A3C6E;
+            margin: 0 0 0.25rem 0;
+        }
+        .tech-info p {
+            font-size: 0.85rem;
+            color: #3E3E3E;
+        }
+        .btn-detail {
+            display: inline-block;
+            background: #E67E22;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+        .local-nav {
+            margin-bottom: 1rem;
+        }
+        .local-nav a {
+            display: inline-block;
+            background: #ececec;
+            padding: 0.3rem 0.8rem;
+            margin: 0.2rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            text-decoration: none;
+            color: #1A3C6E;
+        }
+        .local-nav a:hover {
+            background: #E67E22;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <header>
+        <div class="header-content">
+            <img src="../images/subaru-logo.svg" alt="Subaru Logo" class="site-logo">
+            <h1>Subaru · rugged & adventurous</h1>
+        </div>
+    </header>
+
+    <nav class="global-nav">
+        <a href="../index.html">Home</a>
+        <a href="../models/index.html">Models</a>
+        <a href="index.html">Technology</a>
+        <a href="../life/index.html">Life with Subaru</a>
+        <a href="../history/index.html">History</a>
+        <a href="../about/index.html">About</a>
+    </nav>
+
+    <!-- 三列布局：左侧边栏 + 主内容 + 右侧边栏 -->
+    <div class="main-grid">
+        <!-- 左侧边栏（原内容不变） -->
+        <aside id="sidebar">
+            <div class="sidebar-box">
+                <h3>📌 Tech Local Nav</h3>
+                <ul>
+                    <li><a href="engine.html">Boxer Engine</a></li>
+                    <li><a href="awd.html">Symmetrical AWD</a></li>
+                    <li><a href="eyesight.html">EyeSight Safety</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-box">
+                <h3>Why Subaru Tech?</h3>
+                <p>🔧 Low center of gravity<br>❄️ All-weather confidence<br>🛡️ Award-winning safety</p>
+            </div>
+        </aside>
+
+        <!-- 主内容区（完全保留原内容） -->
+        <main>
+            <h2>Core Technologies</h2>
+            <p>Subaru's engineering philosophy is simple: build vehicles that are safer, more capable, and more fun to drive. Three core technologies define every Subaru: the horizontally opposed Boxer engine, Symmetrical All-Wheel Drive, and the EyeSight driver assist system. Click any card below to explore deeper.</p>
+
+            <div class="local-nav">
+                🔬 Jump to: 
+                <a href="#engine">Boxer Engine</a>
+                <a href="#awd">AWD</a>
+                <a href="#eyesight">EyeSight</a>
+            </div>
+
+            <div class="tech-grid">
+                <a href="engine.html" class="tech-card" id="engine">
+                    <img src="../images/engine.jpg" alt="Subaru Boxer engine cutaway showing low profile">
+                    <div class="tech-info">
+                        <h3>Boxer Engine</h3>
+                        <p>Horizontally opposed · Lower vibration · Smooth power</p>
+                        <span class="btn-detail">Learn more →</span>
+                    </div>
+                </a>
+
+                <a href="awd.html" class="tech-card" id="awd">
+                    <img src="../images/awd.jpg" alt="Symmetrical AWD diagram with balanced drivetrain">
+                    <div class="tech-info">
+                        <h3>Symmetrical AWD</h3>
+                        <p>Full-time all-wheel drive · Superior traction</p>
+                        <span class="btn-detail">Learn more →</span>
+                    </div>
+                </a>
+
+                <a href="eyesight.html" class="tech-card" id="eyesight">
+                    <img src="../images/eyesight.jpg" alt="EyeSight stereo camera system on windshield">
+                    <div class="tech-info">
+                        <h3>EyeSight</h3>
+                        <p>Stereo camera safety · Pre-collision braking</p>
+                        <span class="btn-detail">Learn more →</span>
+                    </div>
+                </a>
+            </div>
+
+            <p><em>These three pillars work together to give you confidence on any road, in any weather.</em></p>
+            <div class="back-to-top"><a href="#">↑ Back to top</a></div>
+        </main>
+
+        <!-- 新增右侧边栏（不改变原有内容，仅添加新模块） -->
+        <aside class="right-sidebar">
+            <div class="sidebar-box">
+                <h3>⚡ Quick Facts</h3>
+                <ul>
+                    <li>Boxer engine first introduced in 1966</li>
+                    <li>Symmetrical AWD standard since 1972</li>
+                    <li>EyeSight launched in 2008 (Japan)</li>
+                    <li>Over 90% of Subarus sold in the past 10 years are still on the road</li>
+                </ul>
+            </div>
+            <div class="sidebar-box">
+                <h3>🔗 Related</h3>
+                <ul>
+                    <li><a href="../models/wrx.html">WRX Performance</a></li>
+                    <li><a href="../history/racing.html">Rally Heritage</a></li>
+                    <li><a href="../life/guide.html">Adventure Guide</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="../index.html">Home</a>
+
+            <a href="../about/contact.html">Contact</a>
+            <a href="../sources.html">Sources</a>
+        </div>
+        <p>© 2026 Subaru Brand Guide – educational project. </p>
+    </footer>
+</div>
+</body>
+</html>

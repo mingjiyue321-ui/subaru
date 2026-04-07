@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subaru Boxer Engine | Horizontally Opposed</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .detail-image { width:100%; max-height:400px; object-fit:cover; border-radius:12px; margin:1rem 0; }
+        .spec-list { background:#f5f5f5; padding:1rem 1.5rem; border-radius:12px; margin:1.5rem 0; }
+        .back-to-tech { display:inline-block; margin:1rem 0; color:#E67E22; font-weight:bold; }
+
+        /* 三列布局覆盖 */
+        .main-grid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #sidebar {
+            width: 260px;
+            background: #ececec;
+            padding: 1.5rem;
+            border-right: 1px solid #ccc;
+        }
+        main {
+            flex: 1;
+            padding: 2rem;
+            background: white;
+            min-width: 0;
+        }
+        .right-sidebar {
+            width: 260px;
+            background: #ececec;
+            padding: 1.5rem;
+            border-left: 1px solid #ccc;
+        }
+        .right-sidebar .sidebar-box {
+            background: white;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .right-sidebar .sidebar-box h3 {
+            color: #1A3C6E;
+            border-left: 4px solid #E67E22;
+            padding-left: 0.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+        .right-sidebar .sidebar-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .right-sidebar .sidebar-box li {
+            margin-bottom: 0.5rem;
+        }
+        .right-sidebar .sidebar-box a {
+            color: #1A3C6E;
+            text-decoration: none;
+        }
+        .right-sidebar .sidebar-box a:hover {
+            text-decoration: underline;
+            color: #E67E22;
+        }
+        @media (max-width: 992px) {
+            .main-grid {
+                flex-direction: column;
+            }
+            #sidebar, .right-sidebar {
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid #ccc;
+            }
+            .right-sidebar {
+                border-top: 1px solid #ccc;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <header>
+        <div class="header-content">
+            <img src="../images/subaru-logo.svg" alt="Subaru Logo" class="site-logo">
+            <h1>Subaru · rugged & adventurous</h1>
+        </div>
+    </header>
+    <nav class="global-nav">
+        <a href="../index.html">Home</a>
+        <a href="../models/index.html">Models</a>
+        <a href="index.html">Technology</a>
+        <a href="../life/index.html">Life with Subaru</a>
+        <a href="../history/index.html">History</a>
+        <a href="../about/index.html">About</a>
+    </nav>
+    <div class="main-grid">
+        <!-- 左侧边栏（原内容不变） -->
+        <aside id="sidebar">
+            <div class="sidebar-box">
+                <h3>Other Tech</h3>
+                <ul>
+                    <li><a href="awd.html">Symmetrical AWD</a></li>
+                    <li><a href="eyesight.html">EyeSight</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-box">
+                <h3>Engine Highlights</h3>
+                <p>⚙️ Flat design · lower CG<br>🔧 Less vibration (natural balance)<br>🏎️ Used in Porsche 911 as well<br>📏 Fits under low hood</p>
+            </div>
+        </aside>
+
+        <!-- 主内容（完全保留） -->
+        <main>
+            <a href="index.html" class="back-to-tech">← Back to Technology</a>
+            <h2>Subaru Boxer Engine</h2>
+            <img src="../images/engine.jpg" alt="Boxer engine cutaway showing pistons moving horizontally" class="detail-image">
+            <p>The Boxer engine (also called "flat" or "horizontally opposed") is Subaru's signature powertrain. Unlike traditional inline or V engines where pistons move up and down, Boxer pistons move side‑to‑side, canceling each other's vibrations. This results in an incredibly smooth, low‑vibration engine that also sits very low in the chassis – lowering the vehicle's center of gravity for sharper handling.</p>
+            <p>Subaru has produced Boxer engines for over 50 years, ranging from 1.0L to 2.5L naturally aspirated and turbocharged versions. The design also improves safety: in a severe frontal crash, the flat engine can slide under the passenger compartment instead of being pushed into the cabin. Today, every Subaru sold worldwide uses a Boxer engine – from the economical Impreza to the rally‑bred WRX.</p>
+            <div class="spec-list">
+                <h3>Key Advantages</h3>
+                <ul>
+                    <li><strong>Lower center of gravity</strong> → better cornering stability</li>
+                    <li><strong>Natural balance</strong> → less need for heavy counterweights</li>
+                    <li><strong>Compact height</strong> → allows for lower hood and better forward visibility</li>
+                    <li><strong>Crash compatibility</strong> → engine tucks under cabin in severe impacts</li>
+                </ul>
+            </div>
+            <p><em>"The Boxer heart makes every Subaru feel planted and confident." – Chief Engineer</em></p>
+            <div class="back-to-top"><a href="#">↑ Back to top</a></div>
+        </main>
+
+        <!-- 新增右侧边栏 -->
+        <aside class="right-sidebar">
+            <div class="sidebar-box">
+                <h3>⚙️ Boxer Trivia</h3>
+                <ul>
+                    <li>First Subaru Boxer: 1966 Subaru 1000</li>
+                    <li>Displacement range: 0.9L – 2.5L turbo</li>
+                    <li>Also used in some aircraft engines</li>
+                </ul>
+            </div>
+            <div class="sidebar-box">
+                <h3>🔗 Related</h3>
+                <ul>
+                    <li><a href="awd.html">Symmetrical AWD</a></li>
+                    <li><a href="../models/wrx.html">WRX Performance</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    <footer>
+        <div class="footer-nav">
+            <a href="../index.html">Home</a>
+
+            <a href="../about/contact.html">Contact</a>
+            <a href="../sources.html">Sources</a>
+        </div>
+        <p>© 2026 Subaru Brand Guide – educational project. </p>
+    </footer>
+</div>
+</body>
+</html>
